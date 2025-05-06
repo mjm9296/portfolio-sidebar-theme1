@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Matteo Mastrocola Portfolio">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@haxtheweb/d-d-d/design-system.css">
+
   <style>
     :root, html, body {
       margin: var(--ddd-spacing-0);
@@ -56,7 +58,6 @@
     }
   </style>
 
-  <!-- Scripts for custom components -->
   <script type="module" src="portfolio-sidebar-theme.js"></script>
   <script type="module" src="portfolio-page.js"></script>
   <script type="module" src="portfolio-sidebar.js"></script>
@@ -111,12 +112,24 @@
     </portfolio-page>
 
     <portfolio-page title="Skills" pagenumber="5">
-      <h3>Skills I've Been Working On</h3>
+      <h3 style="margin-left: 30px;">Skills I've Been Working On</h3>
       <ddd-steps-list accent-color="blue">
-        <div slot="step">IT Support at Penn State</div>
-        <div slot="step">Learning Cybersecurity Concepts</div>
-        <div slot="step">HTML, CSS, and Web Components</div>
-        <div slot="step">Problem Solving & Troubleshooting</div>
+        <div slot="step">
+          <h4>IT Support at Penn State</h4>
+          <p>Providing tech support to students, faculty, and staff daily.</p>
+        </div>
+        <div slot="step">
+          <h4>Learning Cybersecurity Concepts</h4>
+          <p>Studying digital security and safe computing practices at Penn State.</p>
+        </div>
+        <div slot="step">
+          <h4>HTML, CSS, and Web Components</h4>
+          <p>Building modular websites using front-end tools.</p>
+        </div>
+        <div slot="step">
+          <h4>Problem Solving & Troubleshooting</h4>
+          <p>Diagnosing and resolving technical issues efficiently.</p>
+        </div>
       </ddd-steps-list>
     </portfolio-page>
   </portfolio-sidebar-theme>
