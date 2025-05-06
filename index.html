@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Matteo Mastrocola Portfolio">
+
+  <style>
+    :root, html, body {
+      margin: var(--ddd-spacing-0);
+      padding: var(--ddd-spacing-0);
+    }
+
+    p {
+      padding-top: 10px;
+      padding-left: 30px;
+    }
+
+    img.headshot {
+      width: 150px;
+      border-radius: 8px;
+      display: block;
+      margin: 20px auto 10px auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .linkedin-button {
+      display: inline-flex;
+      align-items: center;
+      margin: 20px 30px;
+      background-color: #0077b5;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .linkedin-button:hover {
+      background-color: #005f8d;
+    }
+
+    .linkedin-button img {
+      height: 16px;
+      vertical-align: middle;
+      margin-right: 8px;
+      filter: invert(1);
+    }
+  </style>
+
+  <!-- Scripts for custom components -->
+  <script type="module" src="portfolio-sidebar-theme.js"></script>
+  <script type="module" src="portfolio-page.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@haxtheweb/ddd-steps-list/ddd-steps-list.js"></script>
+  <script type="module" src="project-card.js"></script>
+</head>
+
+<body>
+  <portfolio-sidebar-theme>
+    <portfolio-page title="About Me" pagenumber="1">
+      <img class="headshot" src="assets/headshot.jpg" alt="Matteo Mastrocola headshot" />
+      <h2>Matteo Mastrocola</h2>
+      <p>
+        I'm a cybersecurity student and IT student support specialist at Penn State. I've always been the go-to tech person in my family, and now I'm turning that passion into a career. I enjoy solving problems, helping people, and building experience in the tech world.
+      </p>
+    </portfolio-page>
+
+    <portfolio-page title="Projects" pagenumber="2">
+      <project-card
+        title="Custom-Built Gaming PC"
+        description="I recently built a gaming PC from scratch. It features an AMD Ryzen 5 3600X processor, GEFORCE RTX 2600 graphics card, 32GB DDR4 memory, 1TB NVMe SSD, NZXT cooling fans, an 850W PSU, and a white NZXT case. It was a great experience that taught me a lot about hardware installation and troubleshooting. I feel that it helped me open my eyes into more what I want to do in the tech world as I really enjoyed this."
+      ></project-card>
+    </portfolio-page>
+
+    <portfolio-page title="Resume" pagenumber="3">
+      <p>
+        You can <a href="assets/resume.pdf" target="_blank">view my resume here</a> (PDF).
+      </p>
+      <iframe
+        src="assets/resume.pdf"
+        width="100%"
+        height="600px"
+        style="border: none;"
+        title="Matteo Mastrocola Resume PDF"
+      ></iframe>
+    </portfolio-page>
+
+    <portfolio-page title="Contact" pagenumber="4">
+      <p>
+        You can reach me via email at
+        <strong>mastrocola.matteo537@gmail.com</strong>.
+      </p>
+      <a
+        href="https://www.linkedin.com/in/matteo-mastrocola-ba1591247/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="linkedin-button"
+      >
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn Icon" />
+        Connect with me on LinkedIn
+      </a>
+    </portfolio-page>
+
+    <portfolio-page title="Skills" pagenumber="5">
+      <h3>Skills I've Been Working On</h3>
+      <ddd-steps-list accent-color="blue">
+        <div slot="step">IT Support at Penn State</div>
+        <div slot="step">Learning Cybersecurity Concepts</div>
+        <div slot="step">HTML, CSS, and Web Components</div>
+        <div slot="step">Problem Solving & Troubleshooting</div>
+      </ddd-steps-list>
+    </portfolio-page>
+  </portfolio-sidebar-theme>
+</body>
+
+</html>
